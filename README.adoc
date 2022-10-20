@@ -1,0 +1,3 @@
+= Researches
+
+This repository regroups some algorithmic research stuff.
