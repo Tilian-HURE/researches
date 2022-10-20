@@ -1,0 +1,3 @@
+= Integral calculation
+
+These algorithms can be used to calculate an approximation of an integral by using the rectangles method. The function used is the density function of the exponential law (but other functions could be used).
