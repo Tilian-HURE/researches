@@ -1,5 +1,6 @@
 """
-Replaces every not on the edge cluster (islands) of 1s to 0s 
+Replaces every not on the edge cluster (islands) of 1s to 0s.
+
 Input:
 [1,0,0,1,0,0]
 [0,1,1,0,1,1]
