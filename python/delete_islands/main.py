@@ -22,20 +22,20 @@ from test_matrix import *
 import time
 
 
-def main():  
-  print(test(output1, del_islands_dos(input1)))
-  print(test(output2, del_islands_dos(input2)))
-  print(test(output3, del_islands_dos(input3)))
-  print(test(output4, del_islands_dos(input4)))
-  print(test(output5, del_islands_dos(input5)))
+def tests():
+  print("6*6 matrix:", check(output1, del_islands_dos(input1)))
+  print("2nd 6*6 matrix:", check(output2, del_islands_dos(input2)))
+  print("20*20 matrix:", check(output3, del_islands_dos(input3)))
+  print("10*10 matrix:", check(output4, del_islands_dos(input4)))
+  print("100*100 matrix:", check(output5, del_islands_dos(input5)))
   ## startTime = time.time()
   ## for i in range(1000): test(output5, del_islands_dos(input5))
   ## print(time.time() - startTime)
 
 
-def test(expected, toCheck):
-  return expected == toCheck
+def check(expected, checked):
+  return ["Not OK", "OK"][int(expected == checked)]
 
 
-# Run main
-main()
+# Run tests
+tests()
