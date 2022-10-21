@@ -20,6 +20,7 @@ Output:
 from delete_islands2_tilian import to_one_class_matrix, del_islands_dos
 from test_matrix import *
 import time
+import os
 
 
 def tests():
@@ -39,3 +40,8 @@ def check(expected, checked):
 
 # Run tests
 tests()
+
+# Write gotten output6 from input6 in a .txt file
+output6_file = os.open("output6_matrix.txt", os.O_WRONLY|os.O_CREAT|os.O_TRUNC)
+os.write(output6_file, str.encode(str(del_islands_dos(input6)).replace(" ", "")))
+print("File written!")
