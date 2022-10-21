@@ -44,5 +44,5 @@ tests()
 # Write gotten output6 from input6 in a .py file
 output6_file = os.open("output6_matrix.py", os.O_WRONLY|os.O_CREAT|os.O_TRUNC)
 os.write(output6_file, str.encode(str(del_islands_dos(input6)).replace(" ", "")))
-print("File written!")
+print("output6_matrix.py file written!")
 os.close(output6_file)
