@@ -29,9 +29,10 @@ def tests():
   print("20*20 matrix:", check(output3, del_islands_dos(input3)))
   print("10*10 matrix:", check(output4, del_islands_dos(input4)))
   print("100*100 matrix:", check(output5, del_islands_dos(input5)))
-  ## startTime = time.time()
-  ## for i in range(1000): test(output5, del_islands_dos(input5))
-  ## print(time.time() - startTime)
+  
+  ## startingTime = time.time(); n = 1000
+  ## for i in range(n): check(output5, del_islands_dos(input5))
+  ## print("Taken time to solve", n, "100*100 matrix:", time.time()-startingTime)
 
 
 def check(expected, checked):
