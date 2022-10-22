@@ -20,7 +20,7 @@ public class MenuTestApp {
         mainMenu.add(subMenu);
 
         // Add an option in the sub-menu
-        //subMenu.add(new OptionThree());
+        subMenu.add(new OptionThree());
 
         // Execute the main menu
         mainMenu.execute();
