@@ -1,16 +1,10 @@
 = Menu composite
 
 Java prototype using the Composite pattern to implement menus of options. +
-See the following fonctional abstract classes in the `composite` package: +
+See the following fonctional abstract classes: +
 
 * `OptionMenu`: super abstract class of Menu and Option classes (used for polymorphism)
 * `Menu`: abstract class defining a menu which is composed of options or other sub-menus (must be overrode in its sub-classes)
 * `Option`: abstract class defining an option which can be executed specifically (must be overrode in its sub-classes)
 
-.Class Diagram of the main composite classes
-image::composite/composite_cd.png[]
-
-You can find an exemple of the usage of these classes in the `application` package.
-
-.Class Diagram of the composite classes in an applicative case
-image::application/application_cd.png[]
+All other non-abstract classes are used for applicative tests with a bank agency and its account management.

@@ -1,0 +1,58 @@
+@startuml
+
+
+!theme plain
+top to bottom direction
+
+class MainMenu
+abstract Menu {
+  - exitCode: String
+  + set(int, OptionMenu): void
+  + remove(OptionMenu): void
+  + remove(int): void
+  + execute(): void
+  + add(OptionMenu): void
+  - printMenu(): void
+}
+class MenuTestApp {
+  + main(String[]): void
+}
+abstract Option {
+  + execute(): void
+}
+abstract OptionMenu {
+  - code: String
+  - title: String
+  + execute(): void
+  + getTitle(): String
+  + print(): void
+  + getCode(): String
+}
+class OptionOne {
+  + execute(): void
+}
+class OptionTwo {
+  + execute(): void
+}
+class OptionThree {
+  + execute(): void
+}
+
+class SubMenu
+
+OptionMenu ^-[#000082,plain]- Menu
+OptionMenu ^-[#000082,plain]- Option
+OptionMenu <--* Menu
+
+MenuTestApp -[#000000,dashed]-> OptionMenu
+MenuTestApp -[#000000,dashed]-> Menu
+MenuTestApp -[#000000,dashed]-> Option
+
+Menu ^-[#2C8C1E,plain]- MainMenu
+Menu ^-[#2C8C1E,plain]- SubMenu
+Option ^-[#2C8C1E,plain]- OptionOne
+Option ^-[#2C8C1E,plain]- OptionTwo
+Option ^-[#2C8C1E,plain]- OptionThree
+
+
+@enduml
