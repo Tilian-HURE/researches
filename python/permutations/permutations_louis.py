@@ -1,7 +1,10 @@
+# 🥖🥖🥖
+
 import time
+from typing import List # typed lists
 
 
-def permutations(liste:list, taille:int = 0, tempsLimite:int = 60) -> list:
+def permutations(liste:list, taille:int = 0, tempsLimite:int = 60) -> List[list]:
     """
     Donne les permutations (qui peuvent être tronquées) d'une liste.
     Part d'une lettre (2 pour raison technique) et ajoute la prochaine dans toutes les combinaisons possibles.
