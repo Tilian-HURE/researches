@@ -1,10 +1,10 @@
 import time
 
-def permutations(liste: list, taille: int = 0, tempsLimite: int = 60) -> list:
+
+def permutations(liste:list, taille:int = 0, tempsLimite:int = 60) -> list:
     """
     Donne les permutations (qui peuvent être tronquées) d'une liste.
     Part d'une lettre (2 pour raison technique) et ajoute la prochaine dans toutes les combinaisons possibles.
-
     :param list liste: Liste d'objets dont on cherche les permutations
     :param int taille: Taille des permutations en nombre d'éléments
     :param int tempsLimite: Secondes au bout desquelles la recherche de permutations s'arrête (60 par défaut)
