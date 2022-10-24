@@ -19,24 +19,24 @@ Output:
 
 from delete_islands2_tilian import to_one_class_matrix, del_islands_dos
 from test_matrix import *
-import time
-import os
+from typing import List # typed lists
+import time, os
 
 
 def tests():
-  print("6*6 matrix:", check(output1, del_islands_dos(input1)))
-  print("2nd 6*6 matrix:", check(output2, del_islands_dos(input2)))
-  print("20*20 matrix:", check(output3, del_islands_dos(input3)))
-  print("10*10 matrix:", check(output4, del_islands_dos(input4)))
-  print("100*100 matrix:", check(output5, del_islands_dos(input5)))
+    print("6*6 matrix:", check(output1, del_islands_dos(input1)))
+    print("2nd 6*6 matrix:", check(output2, del_islands_dos(input2)))
+    print("20*20 matrix:", check(output3, del_islands_dos(input3)))
+    print("10*10 matrix:", check(output4, del_islands_dos(input4)))
+    print("100*100 matrix:", check(output5, del_islands_dos(input5)))
   
-  ## startingTime = time.time(); n = 1000
-  ## for i in range(n): check(output5, del_islands_dos(input5))
-  ## print("Taken time to solve", n, "100*100 matrix:", time.time()-startingTime)
+    ## startingTime = time.time(); n = 1000
+    ## for i in range(n): check(output5, del_islands_dos(input5))
+    ## print("Taken time to solve", n, "100*100 matrix:", time.time()-startingTime)
 
 
-def check(expected, checked):
-  return ["Not OK", "OK"][int(expected == checked)]
+def check(expected:List[List[int]], checked:List[List[int]])->str:
+    return ["Not OK", "OK"][int(expected == checked)]
 
 
 # Run tests

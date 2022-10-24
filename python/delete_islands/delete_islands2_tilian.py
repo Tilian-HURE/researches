@@ -1,6 +1,10 @@
+from __future__ import annotations # class typing
+from typing import List # typed lists
+
+
 class One:
     """
-    One objects can be visited together by propagation, they consitute clusters in a matrix.
+    One objects can be visited together by propagation, they constitute clusters in a matrix.
     :param: visited: if the One has been visited or not
     :param: adjUp: other class One object situated above in a matrix
     :param: adjRight: other class One object situated at right in a matrix
@@ -15,16 +19,16 @@ class One:
         self.adjDown = None
         self.adjLeft = None
 
-    def set_adj_up(self, adjUp):
+    def set_adj_up(self, adjUp:One):
         self.adjUp = adjUp
 
-    def set_adj_right(self, adjRight):
+    def set_adj_right(self, adjRight:One):
         self.adjRight = adjRight
 
-    def set_adj_down(self, adjDown):
+    def set_adj_down(self, adjDown:One):
         self.adjDown = adjDown
 
-    def set_adj_left(self, adjLeft):
+    def set_adj_left(self, adjLeft:One):
         self.adjLeft = adjLeft
 
     def propagate(self):
@@ -40,7 +44,7 @@ class One:
                 self.adjLeft.propagate()
 
 
-def to_one_class_matrix(matrix):
+def to_one_class_matrix(matrix:List[List[int]])->List[List[One]]:
     """
     Converts given simple binary matrix to a 0 and class One objects matrix with all adjacencies.
     :param: matrix: simple binary matrix to convert
@@ -65,7 +69,7 @@ def to_one_class_matrix(matrix):
     return oneMatrix
 
 
-def del_islands_dos(matrix):
+def del_islands_dos(matrix:List[List[int]])->List[List[int]]:
     """
     Removes clusters of 1 that aren't on the given matrix borders.
     :param: matrix: simple binary matrix to edit
