@@ -35,10 +35,3 @@ def approximate_integral_of_f(m:float, a:float, b:float, delta:float)->float:
     :return: approximate result of integral of f(x) on interval [a;b] for given m
     """
     return sum(delta*f(x, m) for x in arange(a, b, delta))
-
-
-# Tests
-print("Test result n°1:", approximate_integral_of_f(log(2)/200, 0, 300, 0.001))
-print("Test result (1 - n°1):", 1-approximate_integral_of_f(log(2)/200, 0, 300, 0.001))
-print("Test result n°2:", approximate_integral_of_f(1.5, 0, 2, 0.001))
-## print("Test result:", temp(log(2)/200, 0, 300, 0.001))
