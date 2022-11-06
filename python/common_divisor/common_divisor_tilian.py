@@ -59,4 +59,4 @@ def extended_euclidean(a:int, b:int)->Tuple[int, int]:
             bezout["v"] = nextBezoutStep["u"] * bezout["v"]
             bezout["u"] = bezout["u"] + nextBezoutStep["v"]*bezout["v"]
 
-    return (bezout["v"], bezout["u"])[int(a == bezout["a"])], (bezout["u"], bezout["v"])[int(b == bezout["b"])]
+    return bezout["u"] if a == bezout["a"] else bezout["v"], bezout["v"] if b == bezout["b"] else bezout["u"]
