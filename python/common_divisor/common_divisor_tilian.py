@@ -1,4 +1,4 @@
-from typing import Dict, Tuple, Any  # typed objects
+from typing import Dict, Tuple # typed objects
 
 
 def get_gcd_step(a:int, b:int)->Dict[str, int]:
