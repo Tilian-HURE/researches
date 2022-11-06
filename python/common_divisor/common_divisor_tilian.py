@@ -43,7 +43,7 @@ def extended_euclidean(a:int, b:int)->Tuple[int, int]:
     if a % b == 0:
         raise Exception("The extended Euclidean algorithm can't by applied if a % b == 0.")
 
-    # Apply Euclidean algorithm step by step
+    # Apply the Euclidean algorithm step by step
     gcdSteps = [get_gcd_step(a, b)]
     while gcdSteps[-1]["r"] != gcd(a, b):
         gcdSteps.append(get_gcd_step(gcdSteps[-1]["b"], gcdSteps[-1]["r"]))
