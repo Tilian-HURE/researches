@@ -37,6 +37,7 @@ def extended_euclidean(a:int, b:int)->Tuple[int, int]:
     """
     Applies the extended Euclidean algorithm for two integers following Bézout's theorem.
     :return: u and v for r = a*u + b*v with the given values for a and b (r being their GCD)
+    :raise Exception: if a % b == 0
     """
     if a % b == 0:
         raise Exception("The extended Euclidean algorithm can't be applied if a % b == 0.")
