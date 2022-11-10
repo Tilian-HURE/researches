@@ -1,8 +1,8 @@
-import permutations_louis
+import permutations_louis as resource
 
 
 def tests(value):
-    perms = permutations_louis.permutations(list(value), 0, 30)
+    perms = resource.permutations(list(value), 0, 30)
     print("\nPermutations for \""+value+"\" ("+str(len(perms))+" possibilitie(s)):")
     for possibility in perms:
         print(possibility)
